@@ -4,7 +4,7 @@ import requests
 import os
 from dotenv import load_dotenv
 
-from ..services.openia_service import generate_response
+# from ..services.openia_service import generate_response
 import re
 
 load_dotenv()
@@ -89,8 +89,8 @@ def process_whatsapp_message(body):
     # response = generate_response(message_body)
     print(wa_id)
     # OpenAI Integration
-    response = generate_response(message_body, wa_id, name)
-    response = process_text_for_whatsapp(response)
+    # response = generate_response(message_body, wa_id, name)
+    # response = process_text_for_whatsapp(response)
 
     data = get_text_message_input(wa_id, response)
     send_message(data)

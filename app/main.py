@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 from .routers.whatsapp import router as whatsapp_router
+from .routers.messages import router as messages_router
 
 app = FastAPI()
 
 app.include_router(router=whatsapp_router, prefix="/whatsapp")
+app.include_router(router=messages_router, prefix="")
 
 if __name__ == "__main__":
     import uvicorn
